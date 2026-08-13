@@ -10,7 +10,15 @@ A lightweight, dynamic web application built with Flask and SQLite, allowing use
 - **Delete a Post**: Remove unwanted posts from the database.
 - **User Feedback**: Real-time flash messages for successful actions and error handling.
 - **Responsive Design**: Clean UI built with Bootstrap 4, ensuring the site looks great on mobile and desktop.
+### 📸 Screenshots
 
+**Homepage:**
+![Homepage Screenshot](screenshot.PNG)
+
+**Create new Post in the Form:**
+![Form Screenshot](screenshot_1.PNG)
+**Edit and Delete a Post :**
+![Other Form Screenshot](screenshot_2.PNG)
 ## 🛠️ Tech Stack
 
 - **Backend**: Python, Flask
