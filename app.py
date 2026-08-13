@@ -1,6 +1,9 @@
 import sqlite3
 from werkzeug.exceptions import abort
 from flask import Flask,request,render_template,url_for,flash,redirect
+import os
+from dotenv import load_dotenv
+load_dotenv()
 def get_db_conn(dbname):
     conn=sqlite3.connect(dbname)
     conn.row_factory=sqlite3.Row
@@ -14,7 +17,7 @@ def get_post(post_id):
     return post
 from flask import Flask,render_template
 app=Flask(__name__)
-app.config['SECRET_KEY']='1234'
+app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
 @app.route('/')
 def index():
     conn=get_db_conn('posts_db.db')
