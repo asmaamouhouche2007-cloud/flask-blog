@@ -80,53 +80,16 @@ Create a new file named `.env` in the root directory of your project (the same f
 ```env
 SECRET_KEY=your_secure_random_string_here
 ```
-### Step 5: Create the database
+### Step 5: Run the database script
 
-Since the database file (`posts_db.db`) is not included in the GitHub repository, you must create it yourself locally. 
-
-To do this, create a new Python file named `init_db.py` in the root directory of your project (right next to `app.py`).
-
-Copy and paste the following code into `init_db.py`:
-
-```python
-import sqlite3
-
-# Connect to the database (this will create the file if it doesn't exist)
-connection = sqlite3.connect('posts_db.db')
-cursor = connection.cursor()
-
-# Create the 'posts' table
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS posts (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        title TEXT NOT NULL,
-        content TEXT NOT NULL,
-        created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )
-''')
-
-# Insert a sample post so the blog isn't empty on the first run
-cursor.execute('''
-    INSERT INTO posts (title, content) 
-    VALUES ('Welcome to the Blog!', 'This is your first sample post.')
-''')
-
-# Save changes and close the connection
-connection.commit()
-connection.close()
-
-print("✅ Database 'posts_db.db' created successfully with a sample post!")
-```
-### Step 6: Run the database script
-
-Now that you have created the `init_db.py` file, you need to execute it to actually build the database.
+Since the database is not created  , you need to execute the file `init_db.py` to actually build the database.
 
 Make sure your virtual environment is still active (you should see `(venv)` at the beginning of your terminal prompt). Then, run the following command:
 
 ```bash
 python init_db.py
 ```
-### Step 7: Run the application
+### Step 6: Run the application
 
 With the database successfully created, you are now ready to start the Flask development server.
 
@@ -135,7 +98,7 @@ In your terminal (with your virtual environment still active), run the following
 ```bash
 python app.py
 ```
-### Step 8: Access the application
+### Step 7: Access the application
 
 Open your favorite web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, etc.) and navigate to the following address:
 [http://127.0.0.1:5001](http://127.0.0.1:5001)
