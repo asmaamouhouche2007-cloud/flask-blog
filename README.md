@@ -55,7 +55,7 @@ Make sure you have the following installed on your system:
 Open your terminal (Command Prompt, PowerShell, or Terminal) and run:
 
 ```bash
-git clone https://github.com/[YOUR_USERNAME]/[REPO_NAME].git
+git clone https://github.com/asmaamouhouche2007-cloud/flask-blog.git
 cd [REPO_NAME]
 ```
 ### Step 2: Create and activate a virtual environment
