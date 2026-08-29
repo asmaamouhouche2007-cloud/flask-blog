@@ -33,8 +33,9 @@ flask-blog/
 ├── app.py                  # Main Flask application logic
 ├── .env                    # Environment variables (Secret Key)
 ├── .gitignore              # Files ignored by Git
-├── posts_db.db           # SQLite database file (ignored by Git)
-|__requirements.txt
+|── schema.sql              # Schema of the database that contain blogs
+|── init_db.py              # Run it to create the database
+|──requirements.txt         # Dependencies 
 ├── templates/              # HTML/Jinja2 templates
 │   ├── base.html           # Base template with navbar and footer
 │   ├── index.html          # Homepage displaying all posts
