@@ -51,7 +51,7 @@ Make sure you have the following installed on your system:
 - **Python** (Version 3.7 or higher). You can check by running `python --version` in your terminal.
 - **Git** (Optional, for cloning the repository).
 
-### Step 1: Clone the repository (or download the ZIP)
+### Step 1: Clone the repository 
 
 Open your terminal (Command Prompt, PowerShell, or Terminal) and run:
 
