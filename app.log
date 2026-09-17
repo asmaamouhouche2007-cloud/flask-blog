@@ -126,3 +126,108 @@ ValueError: Format specifier missing precision
 2026-09-17 17:06:51,588 INFO [9c9eb134]<---302  POST /5/edit (18.6ms)
 2026-09-17 17:06:51,598 INFO [c2494739]--->GET /
 2026-09-17 17:06:51,601 INFO [c2494739]<---200  GET / (2.7ms)
+2026-09-17 17:16:43,425 INFO [f71f6073]--->GET /
+2026-09-17 17:16:43,477 INFO [f71f6073]<---200  GET / (51.7ms)
+2026-09-17 17:16:44,913 INFO [af1fabcd]--->GET /
+2026-09-17 17:16:44,916 INFO [af1fabcd]<---200  GET / (3.2ms)
+2026-09-17 17:16:46,275 INFO [5492832c]--->GET /2/edit
+2026-09-17 17:16:46,288 INFO [5492832c]<---200  GET /2/edit (13.1ms)
+2026-09-17 17:16:52,853 INFO [5d68251e]--->POST /2/edit
+2026-09-17 17:16:52,875 INFO [5d68251e] post with id 2 edited 
+2026-09-17 17:16:52,876 INFO [5d68251e]<---302  POST /2/edit (23.2ms)
+2026-09-17 17:16:52,891 INFO [c9ba5a35]--->GET /
+2026-09-17 17:16:52,894 INFO [c9ba5a35]<---200  GET / (2.5ms)
+2026-09-17 17:16:57,015 INFO [ff7d5ec0]--->GET /create
+2026-09-17 17:16:57,024 INFO [ff7d5ec0]<---200  GET /create (9.1ms)
+2026-09-17 17:17:09,369 INFO [601bf634]--->POST /create
+2026-09-17 17:17:09,382 INFO [601bf634] new post created 
+2026-09-17 17:17:09,385 INFO [601bf634]<---302  POST /create (16.0ms)
+2026-09-17 17:17:09,396 INFO [bff756e4]--->GET /
+2026-09-17 17:17:09,400 INFO [bff756e4]<---200  GET / (3.4ms)
+2026-09-17 17:17:11,467 INFO [af38516f]--->GET /6
+2026-09-17 17:17:11,476 INFO [af38516f]<---200  GET /6 (9.3ms)
+2026-09-17 17:17:13,233 INFO [fc376258]--->GET /
+2026-09-17 17:17:13,236 INFO [fc376258]<---200  GET / (3.9ms)
+2026-09-17 17:20:26,634 INFO [0ead853f]--->GET /5
+2026-09-17 17:20:26,668 INFO [0ead853f]<---200  GET /5 (33.8ms)
+2026-09-17 17:20:27,972 INFO [b54eb290]--->GET /5
+2026-09-17 17:20:27,975 INFO [b54eb290]<---200  GET /5 (3.1ms)
+2026-09-17 17:20:31,211 INFO [d423d2ab]--->GET /
+2026-09-17 17:20:31,225 INFO [d423d2ab]<---200  GET / (13.9ms)
+2026-09-17 17:20:34,090 INFO [d3eaf475]--->GET /5/edit
+2026-09-17 17:20:34,102 INFO [d3eaf475]<---200  GET /5/edit (12.0ms)
+2026-09-17 17:20:37,680 INFO [a87e1ff5]--->POST /5/edit
+2026-09-17 17:20:37,683 INFO title missing from post after editing
+2026-09-17 17:20:37,689 INFO [a87e1ff5]<---302  POST /5/edit (8.9ms)
+2026-09-17 17:20:37,708 INFO [d7917b6b]--->GET /
+2026-09-17 17:20:37,711 INFO [d7917b6b]<---200  GET / (2.7ms)
+2026-09-17 17:20:50,422 INFO [12a44c84]--->GET /5
+2026-09-17 17:20:50,425 INFO [12a44c84]<---200  GET /5 (2.4ms)
+2026-09-17 17:20:52,794 INFO [613ad64f]--->GET /
+2026-09-17 17:20:52,796 INFO [613ad64f]<---200  GET / (2.3ms)
+2026-09-17 17:20:57,532 INFO [d4207ec5]--->GET /5/edit
+2026-09-17 17:20:57,535 INFO [d4207ec5]<---200  GET /5/edit (3.3ms)
+2026-09-17 17:21:02,557 INFO [d681881d]--->POST /5/edit
+2026-09-17 17:21:02,574 INFO [d681881d] post with id 5 edited 
+2026-09-17 17:21:02,576 INFO [d681881d]<---302  POST /5/edit (18.6ms)
+2026-09-17 17:21:02,587 INFO [35971112]--->GET /
+2026-09-17 17:21:02,591 INFO [35971112]<---200  GET / (3.2ms)
+2026-09-17 17:27:31,696 INFO [cab28c8c]--->GET /
+2026-09-17 17:27:31,733 INFO [cab28c8c]<---200  GET / (36.9ms)
+2026-09-17 17:27:32,882 INFO [e85745d2]--->GET /
+2026-09-17 17:27:32,885 INFO [e85745d2]<---200  GET / (3.0ms)
+2026-09-17 17:27:34,478 INFO [8f3adc75]--->GET /2/edit
+2026-09-17 17:27:34,481 ERROR Exception on /2/edit [GET]
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ACER\Desktop\flask\app.py", line 82, in edit
+    previous_title=post.title
+                   ^^^^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'title'
+2026-09-17 17:27:34,486 INFO [8f3adc75]<---500  GET /2/edit (8.5ms)
+2026-09-17 17:29:14,328 INFO [e1e81d68]--->GET /2/edit
+2026-09-17 17:29:14,362 INFO [e1e81d68]<---200  GET /2/edit (33.9ms)
+2026-09-17 17:29:18,790 INFO [8b6e2159]--->POST /2/edit
+2026-09-17 17:29:18,812 INFO [8b6e2159] post with id 2 edited 
+2026-09-17 17:29:18,825 INFO [8b6e2159]<---302  POST /2/edit (35.2ms)
+2026-09-17 17:29:18,844 INFO [ff2f5fea]--->GET /
+2026-09-17 17:29:18,861 INFO [ff2f5fea]<---200  GET / (20.5ms)
+2026-09-17 17:29:21,915 INFO [e6792199]--->GET /5
+2026-09-17 17:29:21,925 INFO [e6792199]<---200  GET /5 (9.4ms)
+2026-09-17 17:29:23,717 INFO [c2c26124]--->GET /
+2026-09-17 17:29:23,721 INFO [c2c26124]<---200  GET / (3.6ms)
+2026-09-17 17:29:25,373 INFO [9302927b]--->GET /5/edit
+2026-09-17 17:29:25,375 INFO [9302927b]<---200  GET /5/edit (2.4ms)
+2026-09-17 17:29:29,839 INFO [3969f2aa]--->POST /5/edit
+2026-09-17 17:29:29,856 INFO [3969f2aa] post with id 5 edited 
+2026-09-17 17:29:29,858 INFO [3969f2aa]<---302  POST /5/edit (19.4ms)
+2026-09-17 17:29:29,866 INFO [fbe84a02]--->GET /
+2026-09-17 17:29:29,870 INFO [fbe84a02]<---200  GET / (4.2ms)
+2026-09-17 17:30:35,799 INFO [1ceae50f]--->GET /
+2026-09-17 17:30:35,825 INFO [1ceae50f]<---200  GET / (25.6ms)
+2026-09-17 17:30:37,425 INFO [e6f1ea03]--->GET /2/edit
+2026-09-17 17:30:37,438 INFO [e6f1ea03]<---200  GET /2/edit (13.4ms)
+2026-09-17 17:30:41,976 INFO [9c92241a]--->POST /2/edit
+2026-09-17 17:30:41,996 INFO [9c92241a] post with id 2 edited  , new title :my first post 1113
+2026-09-17 17:30:41,998 INFO [9c92241a]<---302  POST /2/edit (22.3ms)
+2026-09-17 17:30:42,005 INFO [fecbaac7]--->GET /
+2026-09-17 17:30:42,008 INFO [fecbaac7]<---200  GET / (2.4ms)
+2026-09-17 17:30:43,918 INFO [4b6802b4]--->GET /4
+2026-09-17 17:30:43,928 INFO [4b6802b4]<---200  GET /4 (9.2ms)
+2026-09-17 17:30:45,500 INFO [4af58e8a]--->GET /
+2026-09-17 17:30:45,502 INFO [4af58e8a]<---200  GET / (2.7ms)
+2026-09-17 17:30:46,536 INFO [f3cfddb8]--->GET /4/edit
+2026-09-17 17:30:46,538 INFO [f3cfddb8]<---200  GET /4/edit (2.7ms)
+2026-09-17 17:30:50,758 INFO [f819fd59]--->POST /4/edit
+2026-09-17 17:30:50,774 INFO [f819fd59] post with id 4 edited  , new title :Me
+2026-09-17 17:30:50,777 INFO [f819fd59]<---302  POST /4/edit (19.9ms)
+2026-09-17 17:30:50,790 INFO [0ce2164a]--->GET /
+2026-09-17 17:30:50,794 INFO [0ce2164a]<---200  GET / (3.5ms)

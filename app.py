@@ -67,26 +67,37 @@ def create():
         content=request.form['content']
         if not title:
             flash('title is required !')
+            app.logger.info("title was missing from post")
         else:
             conn=get_db_conn('posts_db.db')
             conn.execute('insert into posts (title,content) values (?,?)',(title,content))
             conn.commit()
             conn.close()
+            app.logger.info(f"[{g.request_id}] new post entitled :{title} created successfully ")
         return redirect(url_for('index'))
     return render_template('create.html')
 @app.route('/<int:id>/edit',methods=('GET','POST'))
 def edit(id):
     post=get_post(id)
+    previous_title=post["title"]
+    previous_content=post["content"]
     if request.method=='POST':
         title=request.form['title']
         content=request.form['content']
         if not title:
             flash('title is resquired')
+            app.logger.info(f"[{g.request_id}] title missing from post after editing")
         else :
             conn=get_db_conn('posts_db.db')
             conn.execute("UPDATE posts SET title = ? ,content = ? WHERE id = ?",(title,content,id))
             conn.commit()
             conn.close()
+            log_msg=f"[{g.request_id}] post with id {id} edited "
+            if title!=previous_title:
+                log_msg=log_msg + f"previous title:{previous_title}, new title :{title}"
+            if content!=previous_content:
+                log_msg=log_msg+ f" content modified either"
+            app.logger.info(log_msg)
         return redirect(url_for('index'))
         
     return render_template('edit.html',post=post)
@@ -97,6 +108,7 @@ def delete(id):
     conn.execute("delete from posts where id=?",(id,))
     conn.commit()
     conn.close()
+    app.logger.info(f"[{g.request_id}] post with id {id} deleted ")
     flash('"{}" was successfully deleted!'.format(post['title']))
     return redirect(url_for('index'))
 
