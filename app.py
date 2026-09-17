@@ -26,8 +26,8 @@ def before():
 def after(response):
     ms=(time.time()-g.start_time)*1000
     app.logger.info(
-        f"[{g.request_id}]<---{response.status_code}"
-        f"{request.method} {request.path} ({ms:.f}ms)"
+        f"[{g.request_id}]<---{response.status_code}  "
+        f"{request.method} {request.path} ({ms:.1f}ms)"
     )
     return response
 
@@ -47,9 +47,7 @@ def get_post(post_id):
     if post is None:
         abort(404)
     return post
-from flask import Flask,render_template
-app=Flask(__name__)
-app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
+
 
 @app.route('/')
 def index():

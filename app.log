@@ -1,0 +1,128 @@
+2026-09-17 17:02:47,350 INFO [47c7b7c1]--->GET /
+2026-09-17 17:02:47,382 ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 941, in finalize_request
+    response = self.process_response(response)
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+  File "C:\Users\ACER\Desktop\flask\app.py", line 30, in after
+    f"{request.method} {request.path} ({ms:.f}ms)"
+                                       ^^^^^^^
+ValueError: Format specifier missing precision
+2026-09-17 17:02:47,391 ERROR Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 941, in finalize_request
+    response = self.process_response(response)
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+  File "C:\Users\ACER\Desktop\flask\app.py", line 30, in after
+    f"{request.method} {request.path} ({ms:.f}ms)"
+                                       ^^^^^^^
+ValueError: Format specifier missing precision
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 941, in finalize_request
+    response = self.process_response(response)
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+  File "C:\Users\ACER\Desktop\flask\app.py", line 30, in after
+    f"{request.method} {request.path} ({ms:.f}ms)"
+                                       ^^^^^^^
+ValueError: Format specifier missing precision
+2026-09-17 17:02:48,393 INFO [ccae77d5]--->GET /
+2026-09-17 17:02:48,396 ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 941, in finalize_request
+    response = self.process_response(response)
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+  File "C:\Users\ACER\Desktop\flask\app.py", line 30, in after
+    f"{request.method} {request.path} ({ms:.f}ms)"
+                                       ^^^^^^^
+ValueError: Format specifier missing precision
+2026-09-17 17:02:48,406 ERROR Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 941, in finalize_request
+    response = self.process_response(response)
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+  File "C:\Users\ACER\Desktop\flask\app.py", line 30, in after
+    f"{request.method} {request.path} ({ms:.f}ms)"
+                                       ^^^^^^^
+ValueError: Format specifier missing precision
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 941, in finalize_request
+    response = self.process_response(response)
+  File "C:\Users\ACER\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\app.py", line 1319, in process_response
+    response = self.ensure_sync(func)(response)
+  File "C:\Users\ACER\Desktop\flask\app.py", line 30, in after
+    f"{request.method} {request.path} ({ms:.f}ms)"
+                                       ^^^^^^^
+ValueError: Format specifier missing precision
+2026-09-17 17:04:07,280 INFO [97d9b878]--->GET /
+2026-09-17 17:04:07,314 INFO [97d9b878]<---200GET / (32.9ms)
+2026-09-17 17:04:09,347 INFO [f57a35cf]--->GET /2/edit
+2026-09-17 17:04:09,363 INFO [f57a35cf]<---200GET /2/edit (15.7ms)
+2026-09-17 17:04:14,166 INFO [826bf1a4]--->POST /2/edit
+2026-09-17 17:04:14,189 INFO [826bf1a4]<---302POST /2/edit (23.4ms)
+2026-09-17 17:04:14,202 INFO [211dda27]--->GET /
+2026-09-17 17:04:14,206 INFO [211dda27]<---200GET / (3.7ms)
+2026-09-17 17:04:17,202 INFO [fd54515b]--->GET /3
+2026-09-17 17:04:17,213 INFO [fd54515b]<---200GET /3 (10.5ms)
+2026-09-17 17:04:18,673 INFO [b06901d9]--->GET /
+2026-09-17 17:04:18,676 INFO [b06901d9]<---200GET / (3.6ms)
+2026-09-17 17:04:19,988 INFO [8e71364e]--->GET /4
+2026-09-17 17:04:19,991 INFO [8e71364e]<---200GET /4 (2.7ms)
+2026-09-17 17:04:21,619 INFO [946f75c2]--->GET /
+2026-09-17 17:04:21,623 INFO [946f75c2]<---200GET / (3.2ms)
+2026-09-17 17:05:15,895 INFO [36f33ccf]--->GET /
+2026-09-17 17:05:15,921 INFO [36f33ccf]<---200  GET / (26.2ms)
+2026-09-17 17:05:17,432 INFO [77b8d4a1]--->GET /
+2026-09-17 17:05:17,434 INFO [77b8d4a1]<---200  GET / (2.5ms)
+2026-09-17 17:05:24,142 INFO [955b4ed7]--->GET /create
+2026-09-17 17:05:24,151 INFO [955b4ed7]<---200  GET /create (8.8ms)
+2026-09-17 17:05:44,166 INFO [5ca8d41b]--->POST /create
+2026-09-17 17:05:44,175 INFO [5ca8d41b]<---302  POST /create (8.9ms)
+2026-09-17 17:05:44,187 INFO [98ef836c]--->GET /
+2026-09-17 17:05:44,190 INFO [98ef836c]<---200  GET / (3.5ms)
+2026-09-17 17:05:48,927 INFO [6b200504]--->GET /3
+2026-09-17 17:05:48,936 INFO [6b200504]<---200  GET /3 (8.9ms)
+2026-09-17 17:05:50,445 INFO [3d11cb24]--->GET /
+2026-09-17 17:05:50,449 INFO [3d11cb24]<---200  GET / (3.6ms)
+2026-09-17 17:05:51,557 INFO [5d17d549]--->GET /3/edit
+2026-09-17 17:05:51,568 INFO [5d17d549]<---200  GET /3/edit (10.5ms)
+2026-09-17 17:05:53,755 INFO [45488852]--->POST /3/delete
+2026-09-17 17:05:53,767 INFO [45488852]<---302  POST /3/delete (12.4ms)
+2026-09-17 17:05:53,789 INFO [da53b724]--->GET /
+2026-09-17 17:05:53,793 INFO [da53b724]<---200  GET / (4.1ms)
+2026-09-17 17:06:43,125 INFO [a763963d]--->GET /5/edit
+2026-09-17 17:06:43,128 INFO [a763963d]<---200  GET /5/edit (2.9ms)
+2026-09-17 17:06:51,569 INFO [9c9eb134]--->POST /5/edit
+2026-09-17 17:06:51,588 INFO [9c9eb134]<---302  POST /5/edit (18.6ms)
+2026-09-17 17:06:51,598 INFO [c2494739]--->GET /
+2026-09-17 17:06:51,601 INFO [c2494739]<---200  GET / (2.7ms)
