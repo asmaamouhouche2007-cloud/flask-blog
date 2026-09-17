@@ -33,7 +33,9 @@ flask-blog/
 ├── app.py                  # Main Flask application logic
 ├── .env                    # Environment variables (Secret Key)
 ├── .gitignore              # Files ignored by Git
-├── posts_db.db             # SQLite database file (ignored by Git)
+|── schema.sql              # Schema of the database that contain blogs
+|── init_db.py              # Run it to create the database
+|──requirements.txt         # Dependencies 
 ├── templates/              # HTML/Jinja2 templates
 │   ├── base.html           # Base template with navbar and footer
 │   ├── index.html          # Homepage displaying all posts
@@ -50,13 +52,13 @@ Make sure you have the following installed on your system:
 - **Python** (Version 3.7 or higher). You can check by running `python --version` in your terminal.
 - **Git** (Optional, for cloning the repository).
 
-### Step 1: Clone the repository (or download the ZIP)
+### Step 1: Clone the repository 
 
 Open your terminal (Command Prompt, PowerShell, or Terminal) and run:
 
 ```bash
-git clone https://github.com/[YOUR_USERNAME]/[REPO_NAME].git
-cd [REPO_NAME]
+git clone https://github.com/asmaamouhouche2007-cloud/flask-blog.git
+cd flask-blog
 ```
 ### Step 2: Create and activate a virtual environment
 
@@ -69,7 +71,7 @@ venv\Scripts\activate
 ```
 ### Step 3: Install dependencies
 ```bash
-pip install flask python-dotenv
+pip install -r requirements.txt
 ```
 ### Step 4: Set up environment variables
 
