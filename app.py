@@ -1,9 +1,41 @@
 import sqlite3
 from werkzeug.exceptions import abort
-from flask import Flask,request,render_template,url_for,flash,redirect
+from flask import Flask,request,render_template,url_for,flash,redirect,g
 import os
 from dotenv import load_dotenv
+import logging,uuid,time
+from logging.handlers import RotatingFileHandler
 load_dotenv()
+
+app=Flask(__name__)
+app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
+
+
+handler=RotatingFileHandler('app.log',maxBytes=1_000_000,backupCount=5)
+handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+app.logger.addHandler(handler)
+app.logger.setLevel(logging.INFO)
+
+@app.before_request
+def before():
+    g.request_id=str(uuid.uuid4())[:8]
+    g.start_time=time.time()
+    app.logger.info(f"[{g.request_id}]--->{request.method} {request.path}")
+
+@app.after_request
+def after(response):
+    ms=(time.time()-g.start_time)*1000
+    app.logger.info(
+        f"[{g.request_id}]<---{response.status_code}"
+        f"{request.method} {request.path} ({ms:.f}ms)"
+    )
+    return response
+
+@app.errorhandler
+def on_error(e):
+    app.logger.exception(f"[{g.request_id}] {e}")
+    return {"error":"internal error"},500
+
 def get_db_conn(dbname):
     conn=sqlite3.connect(dbname)
     conn.row_factory=sqlite3.Row
@@ -18,12 +50,14 @@ def get_post(post_id):
 from flask import Flask,render_template
 app=Flask(__name__)
 app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
+
 @app.route('/')
 def index():
     conn=get_db_conn('posts_db.db')
     posts=conn.execute("select * from posts").fetchall()
     conn.close()
     return render_template('index.html',posts=posts)
+
 @app.route('/<int:post_id>')
 def post(post_id):
     post=get_post(post_id)
